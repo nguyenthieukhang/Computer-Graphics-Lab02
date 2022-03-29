@@ -1,0 +1,9 @@
+You could use the relase program in the relase folder or you could compile the main.cpp to executable program.
+
+1. If you use the already compiled release:
+	In the release folder, run the command ./release
+
+2. If you want to recompile the main.cpp file:
+	Run the following command in the source folder:
+		
+g++-9 -std=c++17 -o release main.cpp Triangle.h Triangle.cpp Rectangle.h Rectangle.cpp Circle.h Circle.cpp Painter.h Painter.cpp Factory.h Factory.cpp Shape.h Shape.cpp Line.h Line.cpp -L/System/Library/Frameworks -framework GLUT -framework OpenGL && ./release
