@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <iostream>
-#include "Factory.h"
-#include "Painter.h"
+#include "../headers/Factory.h"
+#include "../headers/Painter.h"
 
 #define SELECT 100002
 #define COLOR 100003
@@ -89,6 +89,21 @@ void processDrawEvents(int code)
 	case TRIANGLE:
 		shapeChosen = TRIANGLE;
 		break;
+	case ELLIPSE:
+		shapeChosen = ELLIPSE;
+		break;
+	case STAR:
+		shapeChosen = STAR;
+		break;
+	case SQUARE:
+		shapeChosen = SQUARE;
+		break;
+	case HEXAGON:
+		shapeChosen = HEXAGON;
+		break;
+	case PENTAGON:
+		shapeChosen = PENTAGON;
+		break;
 	default:
 		return;
 	}
@@ -122,11 +137,25 @@ void createGLUTMenus()
 	glutAddMenuEntry("Blue", BLUE);
 	glutAddMenuEntry("Green", GREEN);
 
+	int submenuPolygon = glutCreateMenu(processDrawEvents);
+	glutAddMenuEntry("Hexagon", HEXAGON);
+	glutAddMenuEntry("Pentagon", PENTAGON);
+
+	int submenuOval = glutCreateMenu(processDrawEvents);
+	glutAddMenuEntry("Circle", CIRCLE);
+	glutAddMenuEntry("Ellipse", ELLIPSE);
+
+	int submenuQuadrangle = glutCreateMenu(processDrawEvents);
+	glutAddMenuEntry("Rectangle", RECTANGLE);
+	glutAddMenuEntry("Square", SQUARE);
+
 	int submenuDraw = glutCreateMenu(processDrawEvents);
 	glutAddMenuEntry("Line", LINE);
-	glutAddMenuEntry("Rectangle", RECTANGLE);
-	glutAddMenuEntry("Circle", CIRCLE);
+	glutAddSubMenu("Quadrangle", submenuQuadrangle);
+	glutAddSubMenu("Oval", submenuOval);
+	glutAddSubMenu("Polygon", submenuPolygon);
 	glutAddMenuEntry("Triangle", TRIANGLE);
+	glutAddMenuEntry("Star", STAR);
 
 	int mainmenu = glutCreateMenu(processDrawEvents);
 	glutAddSubMenu("Draw", submenuDraw);

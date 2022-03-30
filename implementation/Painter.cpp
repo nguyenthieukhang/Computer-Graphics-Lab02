@@ -1,4 +1,4 @@
-#include "Painter.h"
+#include "../headers/Painter.h"
 
 void putPixel(Point p, RGBColor color)
 {

@@ -1,6 +1,6 @@
 #ifndef _PAINTER_
 #define _PAINTER_
-#include "Shape.h"
+#include "shapes/Shape.h"
 #include <queue>
 #include <stack>
 #include <iostream>

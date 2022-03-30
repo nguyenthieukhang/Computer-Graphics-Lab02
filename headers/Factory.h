@@ -1,10 +1,15 @@
 #ifndef _FACTORY_
 #define _FACTORY_
-#include "Shape.h"
-#include "Line.h"
-#include "Circle.h"
-#include "Rectangle.h"
-#include "Triangle.h"
+#include "shapes/Shape.h"
+#include "shapes/Line.h"
+#include "shapes/Circle.h"
+#include "shapes/Rectangle.h"
+#include "shapes/Triangle.h"
+#include "shapes/Ellipse.h"
+#include "shapes/Star.h"
+#include "shapes/Square.h"
+#include "shapes/Hexagon.h"
+#include "shapes/Pentagon.h"
 #include <vector>
 #include <utility>
 
@@ -13,8 +18,12 @@
 #define CIRCLE 100
 #define TRIANGLE 101
 #define LINE 102
-#define ELIPSE 103
+#define ELLIPSE 103
 #define RECTANGLE 104
+#define STAR 105
+#define HEXAGON 106
+#define PENTAGON 107
+#define SQUARE 108
 
 class Factory
 {

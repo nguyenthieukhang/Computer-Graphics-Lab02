@@ -1,4 +1,4 @@
-#include "Rectangle.h"
+#include "../../headers/shapes/Rectangle.h"
 
 Rectangle::Rectangle(Point p1, Point p2)
 {

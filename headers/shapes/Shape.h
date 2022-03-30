@@ -6,8 +6,8 @@
 #include <GL/glut.h>
 #endif
 #include <cmath>
-const int WIDTH = 200;
-const int HEIGHT = 160;
+const int WIDTH = 400;
+const int HEIGHT = 320;
 
 class RGBColor
 {
@@ -31,6 +31,8 @@ public:
     int getx();
     int gety();
 };
+
+double dist(Point p1, Point p2);
 
 class Shape
 {

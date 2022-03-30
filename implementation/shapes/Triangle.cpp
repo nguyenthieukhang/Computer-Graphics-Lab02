@@ -1,4 +1,4 @@
-#include "Triangle.h"
+#include "../../headers/shapes/Triangle.h"
 
 Triangle::Triangle(Point p1, Point p2)
 {
